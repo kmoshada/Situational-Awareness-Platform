@@ -6,7 +6,8 @@ import logging
 from .ml_engine import detect_market_anomaly, compute_rolling_trend
 
 # Adjusted base path to match my project structure
-BASE = os.path.join(os.path.dirname(__file__), "..", "..", "data")
+# Adjusted base path to match my project structure
+BASE = os.path.join(os.path.dirname(__file__), "..", "data")
 
 def read_latest_json(category, filename):
     path = os.path.join(BASE, category, filename)
@@ -69,7 +70,8 @@ def get_cse_overview():
         "status": status,
         "summary": summary,
         "gainers": gainers,
-        "losers": losers
+        "losers": losers,
+        "prices": prices
     }
 
     return metrics

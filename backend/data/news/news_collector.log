@@ -1,0 +1,4 @@
+2025-12-06 11:20:28,768 INFO News collector started
+2025-12-06 11:20:28,768 INFO Fetching ada_derana from https://www.adaderana.lk/rss.php
+2025-12-06 11:20:29,158 INFO Fetching daily_mirror from https://www.dailymirror.lk/rss
+2025-12-06 11:20:29,669 INFO Saved 20 news items to /home/km/Developments/Web/System SL/situational-awareness/backend/collectors/../data/news/news_latest.json

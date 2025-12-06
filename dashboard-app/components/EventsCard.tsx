@@ -1,4 +1,4 @@
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Calendar } from "lucide-react";
 
 interface Event {
@@ -7,36 +7,35 @@ interface Event {
 }
 
 interface EventsCardProps {
-    upcoming: Event[];
-    count: number;
+    events: Event[];
 }
 
-export default function EventsCard({ upcoming, count }: EventsCardProps) {
+export function EventsCard({ events }: EventsCardProps) {
     return (
-        <Card className="bg-brand/20 border-brand/50 backdrop-blur-sm text-white">
-            <CardHeader className="pb-2">
-                <CardTitle className="text-sm font-medium text-gray-400 flex items-center gap-2">
-                    <Calendar className="h-4 w-4" /> Upcoming Events
+        <Card>
+            <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                    <Calendar className="h-5 w-5 text-purple-400" />
+                    Upcoming Events
                 </CardTitle>
             </CardHeader>
             <CardContent>
-                <div className="text-2xl font-bold">
-                    {count > 0 ? count : "0"}
-                </div>
-                <div className="text-xs text-gray-500 mb-3">
-                    Total Holidays Found
-                </div>
-
-                <div className="space-y-3 max-h-[200px] overflow-y-auto pr-1 custom-scrollbar">
-                    {upcoming && upcoming.length > 0 ? (
-                        upcoming.map((event, idx) => (
-                            <div key={idx} className="flex flex-col border-l-2 border-blue-500 pl-3 py-1 border-b border-gray-700/50 last:border-b-0">
-                                <span className="text-sm text-gray-200 font-medium">{event.name}</span>
-                                <span className="text-xs text-gray-500">{event.date}</span>
-                            </div>
-                        ))
-                    ) : (
-                        <div className="text-xs text-gray-600 italic">No upcoming events</div>
+                <div className="space-y-3">
+                    {events.map((event, index) => (
+                        <div
+                            key={index}
+                            className="flex items-center justify-between p-3 rounded-lg bg-slate-900/50 border border-slate-800"
+                        >
+                            <span className="font-medium text-slate-200">{event.name}</span>
+                            <span className="text-sm text-purple-400 bg-purple-950/30 px-2 py-1 rounded border border-purple-900/30">
+                                {event.date}
+                            </span>
+                        </div>
+                    ))}
+                    {events.length === 0 && (
+                        <div className="text-center text-slate-500 py-4">
+                            No upcoming events
+                        </div>
                     )}
                 </div>
             </CardContent>

@@ -13,7 +13,7 @@ app = FastAPI(title="Situational Awareness API")
 # Calculate absolute path to collectors directory
 # main.py is in backend/app/main.py -> ../../.. is project root
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
-COLLECTORS_DIR = BASE_DIR / "collectors"
+COLLECTORS_DIR = BASE_DIR / "backend" / "collectors"
 
 def run_collectors_loop():
     """Runs data collectors in a background loop every 5 minutes."""
@@ -32,9 +32,8 @@ def run_collectors_loop():
 @app.on_event("startup")
 def startup_event():
     # Start collectors in a background thread
-    # thread = threading.Thread(target=run_collectors_loop, daemon=True)
-    # thread.start()
-    pass
+    thread = threading.Thread(target=run_collectors_loop, daemon=True)
+    thread.start()
 
 app.add_middleware(
     CORSMiddleware,
@@ -47,7 +46,7 @@ app.add_middleware(
 def health():
     return {"status": "ok", "time": __import__("datetime").datetime.utcnow().isoformat()}
 
-@app.get("/signals")
+@app.get("/api/signals")
 def signals():
     indicators = build_overall_indicators()
     # Ensure frontend compatibility by adding expected fields if missing
@@ -71,7 +70,7 @@ def signals():
 
     return indicators
 
-@app.get("/risk")
+@app.get("/api/risk")
 def get_risk():
     data = build_overall_indicators()
     factors = data["weather"]["alerts"][:]
@@ -85,7 +84,7 @@ def get_risk():
         "factors": factors
     }
 
-@app.get("/opportunities")
+@app.get("/api/opportunities")
 def get_opportunities():
     data = build_overall_indicators()
     factors = []
@@ -96,14 +95,15 @@ def get_opportunities():
         "factors": factors
     }
 
-@app.get("/market")
+@app.get("/api/market")
 def get_market_data():
     data = get_cse_overview()
     return {
         "summary": data.get("summary"),
         "status": data.get("status"),
         "gainers": data.get("gainers"),
-        "losers": data.get("losers")
+        "losers": data.get("losers"),
+        "prices": data.get("prices", [])
     }
 
 @app.get("/")

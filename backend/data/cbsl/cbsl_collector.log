@@ -1,0 +1,27 @@
+2025-12-06 10:33:09,204 INFO CBSL collector started
+2025-12-06 10:33:09,815 INFO Saved CBSL snapshot to /home/km/Developments/Web/System SL/situational-awareness/backend/collectors/../data/cbsl/rates_20251206_050309.json
+2025-12-06 10:38:14,344 INFO CBSL collector started
+2025-12-06 10:38:35,144 WARNING Failed to fetch rates from API: HTTPSConnectionPool(host='open.er-api.com', port=443): Max retries exceeded with url: /v6/latest/USD (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7f7f611b4440>: Failed to resolve 'open.er-api.com' ([Errno -2] Name or service not known)")). Using mock data.
+2025-12-06 10:38:35,145 INFO Saved CBSL snapshot to /home/km/Developments/Web/System SL/situational-awareness/backend/collectors/../data/cbsl/rates_20251206_050835.json
+2025-12-06 10:44:16,135 INFO CBSL collector started
+2025-12-06 10:44:16,662 INFO Saved CBSL snapshot to /home/km/Developments/Web/System SL/situational-awareness/backend/collectors/../data/cbsl/rates_20251206_051416.json
+2025-12-06 10:49:21,742 INFO CBSL collector started
+2025-12-06 10:49:22,360 INFO Saved CBSL snapshot to /home/km/Developments/Web/System SL/situational-awareness/backend/collectors/../data/cbsl/rates_20251206_051922.json
+2025-12-06 10:50:57,354 INFO CBSL collector started
+2025-12-06 10:50:57,828 INFO Saved CBSL snapshot to /home/km/Developments/Web/System SL/situational-awareness/backend/collectors/../data/cbsl/rates_20251206_052057.json
+2025-12-06 10:56:04,002 INFO CBSL collector started
+2025-12-06 10:56:04,537 INFO Saved CBSL snapshot to /home/km/Developments/Web/System SL/situational-awareness/backend/collectors/../data/cbsl/rates_20251206_052604.json
+2025-12-06 11:01:09,894 INFO CBSL collector started
+2025-12-06 11:01:10,440 INFO Saved CBSL snapshot to /home/km/Developments/Web/System SL/situational-awareness/backend/collectors/../data/cbsl/rates_20251206_053110.json
+2025-12-06 11:06:14,628 INFO CBSL collector started
+2025-12-06 11:06:18,553 INFO Saved CBSL snapshot to /home/km/Developments/Web/System SL/situational-awareness/backend/collectors/../data/cbsl/rates_20251206_053618.json
+2025-12-06 11:11:23,661 INFO CBSL collector started
+2025-12-06 11:11:25,407 INFO Saved CBSL snapshot to /home/km/Developments/Web/System SL/situational-awareness/backend/collectors/../data/cbsl/rates_20251206_054125.json
+2025-12-06 11:15:06,319 INFO CBSL collector started
+2025-12-06 11:15:06,711 INFO Saved CBSL snapshot to /home/km/Developments/Web/System SL/situational-awareness/backend/collectors/../data/cbsl/rates_20251206_054506.json
+2025-12-06 11:19:46,311 INFO CBSL collector started
+2025-12-06 11:19:46,806 INFO Saved CBSL snapshot to /home/km/Developments/Web/System SL/situational-awareness/backend/collectors/../data/cbsl/rates_20251206_054946.json
+2025-12-06 11:24:51,727 INFO CBSL collector started
+2025-12-06 11:24:53,180 INFO Saved CBSL snapshot to /home/km/Developments/Web/System SL/situational-awareness/backend/collectors/../data/cbsl/rates_20251206_055453.json
+2025-12-06 11:29:58,735 INFO CBSL collector started
+2025-12-06 11:29:59,551 INFO Saved CBSL snapshot to /home/km/Developments/Web/System SL/situational-awareness/backend/collectors/../data/cbsl/rates_20251206_055959.json

@@ -1,4 +1,5 @@
-import { CloudRain, Sun, Cloud, Wind } from "lucide-react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Cloud, CloudRain, CloudLightning, Sun, CloudFog } from "lucide-react";
 
 interface WeatherSummary {
     city: string;
@@ -13,27 +14,47 @@ interface WeatherWidgetProps {
 export function WeatherWidget({ summaries }: WeatherWidgetProps) {
     const getWeatherIcon = (condition: string) => {
         const c = condition.toLowerCase();
-        if (c.includes("rain")) return <CloudRain className="h-4 w-4 text-blue-400" />;
-        if (c.includes("cloud")) return <Cloud className="h-4 w-4 text-gray-400" />;
-        if (c.includes("clear") || c.includes("sun")) return <Sun className="h-4 w-4 text-yellow-400" />;
-        return <Wind className="h-4 w-4 text-slate-400" />;
+        if (c.includes("rain")) return <CloudRain className="h-5 w-5 text-blue-400" />;
+        if (c.includes("thunder") || c.includes("storm")) return <CloudLightning className="h-5 w-5 text-yellow-400" />;
+        if (c.includes("cloud")) return <Cloud className="h-5 w-5 text-slate-400" />;
+        if (c.includes("clear") || c.includes("sun")) return <Sun className="h-5 w-5 text-orange-400" />;
+        return <CloudFog className="h-5 w-5 text-slate-500" />;
     };
 
     return (
-        <div className="rounded-xl border border-slate-800 bg-slate-900/50 p-4 shadow-lg backdrop-blur-md">
-            <h3 className="mb-3 text-sm font-medium text-slate-300">Weather Overview</h3>
-            <div className="grid grid-cols-2 gap-3">
-                {summaries.slice(0, 4).map((w, i) => (
-                    <div key={i} className="flex items-center justify-between rounded-lg bg-slate-950/50 p-2 transition-colors hover:bg-slate-800/50">
-                        <div className="flex items-center gap-2">
-                            {getWeatherIcon(w.condition)}
-                            <span className="text-sm text-slate-300">{w.city}</span>
+        <Card>
+            <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                    <Cloud className="h-5 w-5 text-slate-200" />
+                    Weather Conditions
+                </CardTitle>
+            </CardHeader>
+            <CardContent>
+                <div className="grid grid-cols-1 gap-3">
+                    {summaries.map((summary, index) => (
+                        <div
+                            key={index}
+                            className="flex items-center justify-between p-3 rounded-lg bg-slate-900/50 border border-slate-800"
+                        >
+                            <div className="flex items-center gap-3">
+                                {getWeatherIcon(summary.condition)}
+                                <div>
+                                    <div className="font-medium text-slate-200">{summary.city}</div>
+                                    <div className="text-xs text-slate-500 capitalize">{summary.condition}</div>
+                                </div>
+                            </div>
+                            <div className="text-lg font-bold text-slate-100">
+                                {typeof summary.temp === 'number' ? Math.round(summary.temp) : summary.temp}°C
+                            </div>
                         </div>
-                        <span className="text-sm font-bold text-slate-200">{typeof w.temp === 'number' ? w.temp.toFixed(1) : w.temp}°C</span>
-                    </div>
-                ))}
-                {summaries.length === 0 && <div className="text-xs text-slate-500">No weather data</div>}
-            </div>
-        </div>
+                    ))}
+                    {summaries.length === 0 && (
+                        <div className="text-center text-slate-500 py-4">
+                            No weather data available
+                        </div>
+                    )}
+                </div>
+            </CardContent>
+        </Card>
     );
 }

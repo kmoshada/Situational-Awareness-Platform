@@ -1,0 +1,65 @@
+2025-12-06 10:33:09,961 INFO Events collector started
+2025-12-06 10:33:10,548 WARNING Failed to fetch Nager.Date holidays: Expecting value: line 1 column 1 (char 0)
+2025-12-06 10:33:10,549 INFO No holidays fetched from Nager.Date; using fallback events
+2025-12-06 10:33:10,549 INFO Saved events snapshot to /home/km/Developments/Web/System SL/situational-awareness/backend/collectors/../data/events/events_20251206_050310.json
+2025-12-06 10:33:10,550 INFO Events collector finished
+2025-12-06 10:38:35,303 INFO Events collector started
+2025-12-06 10:38:35,310 WARNING Failed to fetch Nager.Date holidays: HTTPSConnectionPool(host='date.nager.at', port=443): Max retries exceeded with url: /api/v3/PublicHolidays/2025/LK (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7f75db6c3230>: Failed to resolve 'date.nager.at' ([Errno -2] Name or service not known)"))
+2025-12-06 10:38:35,310 INFO No holidays fetched from Nager.Date; using fallback events
+2025-12-06 10:38:35,311 INFO Saved events snapshot to /home/km/Developments/Web/System SL/situational-awareness/backend/collectors/../data/events/events_20251206_050835.json
+2025-12-06 10:38:35,311 INFO Events collector finished
+2025-12-06 10:44:16,816 INFO Events collector started
+2025-12-06 10:44:17,430 WARNING Failed to fetch Nager.Date holidays: Expecting value: line 1 column 1 (char 0)
+2025-12-06 10:44:17,431 INFO No holidays fetched from Nager.Date; using fallback events
+2025-12-06 10:44:17,431 INFO Saved events snapshot to /home/km/Developments/Web/System SL/situational-awareness/backend/collectors/../data/events/events_20251206_051417.json
+2025-12-06 10:44:17,431 INFO Events collector finished
+2025-12-06 10:49:22,502 INFO Events collector started
+2025-12-06 10:49:23,082 WARNING Failed to fetch Nager.Date holidays: Expecting value: line 1 column 1 (char 0)
+2025-12-06 10:49:23,082 INFO No holidays fetched from Nager.Date; using fallback events
+2025-12-06 10:49:23,083 INFO Saved events snapshot to /home/km/Developments/Web/System SL/situational-awareness/backend/collectors/../data/events/events_20251206_051923.json
+2025-12-06 10:49:23,083 INFO Events collector finished
+2025-12-06 10:50:57,984 INFO Events collector started
+2025-12-06 10:50:58,524 WARNING Failed to fetch Nager.Date holidays: Expecting value: line 1 column 1 (char 0)
+2025-12-06 10:50:58,524 INFO No holidays fetched from Nager.Date; using fallback events
+2025-12-06 10:50:58,525 INFO Saved events snapshot to /home/km/Developments/Web/System SL/situational-awareness/backend/collectors/../data/events/events_20251206_052058.json
+2025-12-06 10:50:58,525 INFO Events collector finished
+2025-12-06 10:56:04,674 INFO Events collector started
+2025-12-06 10:56:05,355 WARNING Failed to fetch Nager.Date holidays: Expecting value: line 1 column 1 (char 0)
+2025-12-06 10:56:05,355 INFO No holidays fetched from Nager.Date; using fallback events
+2025-12-06 10:56:05,356 INFO Saved events snapshot to /home/km/Developments/Web/System SL/situational-awareness/backend/collectors/../data/events/events_20251206_052605.json
+2025-12-06 10:56:05,356 INFO Events collector finished
+2025-12-06 11:01:10,616 INFO Events collector started
+2025-12-06 11:01:11,109 WARNING Failed to fetch Nager.Date holidays: Expecting value: line 1 column 1 (char 0)
+2025-12-06 11:01:11,110 INFO No holidays fetched from Nager.Date; using fallback events
+2025-12-06 11:01:11,110 INFO Saved events snapshot to /home/km/Developments/Web/System SL/situational-awareness/backend/collectors/../data/events/events_20251206_053111.json
+2025-12-06 11:01:11,110 INFO Events collector finished
+2025-12-06 11:06:18,696 INFO Events collector started
+2025-12-06 11:06:19,452 WARNING Failed to fetch Nager.Date holidays: Expecting value: line 1 column 1 (char 0)
+2025-12-06 11:06:19,453 INFO No holidays fetched from Nager.Date; using fallback events
+2025-12-06 11:06:19,454 INFO Saved events snapshot to /home/km/Developments/Web/System SL/situational-awareness/backend/collectors/../data/events/events_20251206_053619.json
+2025-12-06 11:06:19,454 INFO Events collector finished
+2025-12-06 11:11:25,551 INFO Events collector started
+2025-12-06 11:11:25,998 WARNING Failed to fetch Nager.Date holidays: Expecting value: line 1 column 1 (char 0)
+2025-12-06 11:11:25,998 INFO No holidays fetched from Nager.Date; using fallback events
+2025-12-06 11:11:25,999 INFO Saved events snapshot to /home/km/Developments/Web/System SL/situational-awareness/backend/collectors/../data/events/events_20251206_054125.json
+2025-12-06 11:11:25,999 INFO Events collector finished
+2025-12-06 11:15:06,849 INFO Events collector started
+2025-12-06 11:15:07,213 WARNING Failed to fetch Nager.Date holidays: Expecting value: line 1 column 1 (char 0)
+2025-12-06 11:15:07,214 INFO No holidays fetched from Nager.Date; using fallback events
+2025-12-06 11:15:07,214 INFO Saved events snapshot to /home/km/Developments/Web/System SL/situational-awareness/backend/collectors/../data/events/events_20251206_054507.json
+2025-12-06 11:15:07,215 INFO Events collector finished
+2025-12-06 11:19:47,064 INFO Events collector started
+2025-12-06 11:19:47,809 WARNING Failed to fetch Nager.Date holidays: Expecting value: line 1 column 1 (char 0)
+2025-12-06 11:19:47,810 INFO No holidays fetched from Nager.Date; using fallback events
+2025-12-06 11:19:47,811 INFO Saved events snapshot to /home/km/Developments/Web/System SL/situational-awareness/backend/collectors/../data/events/events_20251206_054947.json
+2025-12-06 11:19:47,811 INFO Events collector finished
+2025-12-06 11:24:53,337 INFO Events collector started
+2025-12-06 11:24:54,627 WARNING Failed to fetch Nager.Date holidays: Expecting value: line 1 column 1 (char 0)
+2025-12-06 11:24:54,628 INFO No holidays fetched from Nager.Date; using fallback events
+2025-12-06 11:24:54,629 INFO Saved events snapshot to /home/km/Developments/Web/System SL/situational-awareness/backend/collectors/../data/events/events_20251206_055454.json
+2025-12-06 11:24:54,629 INFO Events collector finished
+2025-12-06 11:29:59,766 INFO Events collector started
+2025-12-06 11:30:00,274 WARNING Failed to fetch Nager.Date holidays: Expecting value: line 1 column 1 (char 0)
+2025-12-06 11:30:00,275 INFO No holidays fetched from Nager.Date; using fallback events
+2025-12-06 11:30:00,276 INFO Saved events snapshot to /home/km/Developments/Web/System SL/situational-awareness/backend/collectors/../data/events/events_20251206_060000.json
+2025-12-06 11:30:00,277 INFO Events collector finished

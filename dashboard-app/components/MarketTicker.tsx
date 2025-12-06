@@ -1,10 +1,11 @@
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { TrendingUp, TrendingDown } from "lucide-react";
 
 interface Stock {
     symbol: string;
     price: number;
     change: number;
-    changePercentage: number;
+    changePercent: number;
 }
 
 interface MarketTickerProps {
@@ -14,46 +15,64 @@ interface MarketTickerProps {
 
 export function MarketTicker({ gainers, losers }: MarketTickerProps) {
     return (
-        <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
-            {/* Gainers */}
-            <div className="rounded-xl border border-slate-800 bg-slate-900/50 p-4 shadow-lg backdrop-blur-md">
-                <div className="mb-3 flex items-center gap-2">
-                    <TrendingUp className="h-4 w-4 text-green-500" />
-                    <h3 className="text-sm font-medium text-slate-300">Top Gainers</h3>
-                </div>
-                <div className="space-y-2">
-                    {gainers.slice(0, 5).map((stock, i) => (
-                        <div key={i} className="flex items-center justify-between text-sm">
-                            <span className="font-medium text-slate-200">{stock.symbol}</span>
-                            <div className="text-right">
-                                <div className="text-slate-200">{stock.price.toFixed(2)}</div>
-                                <div className="text-xs text-green-500">+{stock.changePercentage.toFixed(2)}%</div>
+        <Card className="h-full">
+            <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                    <TrendingUp className="h-5 w-5 text-green-500" />
+                    Market Movers
+                </CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-6">
+                <div>
+                    <h4 className="text-sm font-medium text-green-400 mb-3 flex items-center gap-2">
+                        Top Gainers <TrendingUp className="h-3 w-3" />
+                    </h4>
+                    <div className="space-y-2">
+                        {gainers.slice(0, 3).map((stock) => (
+                            <div
+                                key={stock.symbol}
+                                className="flex justify-between items-center text-sm bg-green-950/20 p-2 rounded border border-green-900/30"
+                            >
+                                <span className="font-bold text-slate-200">{stock.symbol}</span>
+                                <div className="text-right">
+                                    <div className="text-slate-100">{(stock.price || 0).toFixed(2)}</div>
+                                    <div className="text-green-500 text-xs">
+                                        +{(stock.changePercent || 0).toFixed(2)}%
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    ))}
-                    {gainers.length === 0 && <div className="text-xs text-slate-500">No data</div>}
+                        ))}
+                        {gainers.length === 0 && (
+                            <div className="text-xs text-slate-500 italic">No gainers data</div>
+                        )}
+                    </div>
                 </div>
-            </div>
 
-            {/* Losers */}
-            <div className="rounded-xl border border-slate-800 bg-slate-900/50 p-4 shadow-lg backdrop-blur-md">
-                <div className="mb-3 flex items-center gap-2">
-                    <TrendingDown className="h-4 w-4 text-red-500" />
-                    <h3 className="text-sm font-medium text-slate-300">Top Losers</h3>
-                </div>
-                <div className="space-y-2">
-                    {losers.slice(0, 5).map((stock, i) => (
-                        <div key={i} className="flex items-center justify-between text-sm">
-                            <span className="font-medium text-slate-200">{stock.symbol}</span>
-                            <div className="text-right">
-                                <div className="text-slate-200">{stock.price.toFixed(2)}</div>
-                                <div className="text-xs text-red-500">{stock.changePercentage.toFixed(2)}%</div>
+                <div>
+                    <h4 className="text-sm font-medium text-red-400 mb-3 flex items-center gap-2">
+                        Top Losers <TrendingDown className="h-3 w-3" />
+                    </h4>
+                    <div className="space-y-2">
+                        {losers.slice(0, 3).map((stock) => (
+                            <div
+                                key={stock.symbol}
+                                className="flex justify-between items-center text-sm bg-red-950/20 p-2 rounded border border-red-900/30"
+                            >
+                                <span className="font-bold text-slate-200">{stock.symbol}</span>
+                                <div className="text-right">
+                                    <div className="text-slate-100">{(stock.price || 0).toFixed(2)}</div>
+                                    <div className="text-red-500 text-xs">
+                                        {(stock.changePercent || 0).toFixed(2)}%
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    ))}
-                    {losers.length === 0 && <div className="text-xs text-slate-500">No data</div>}
+                        ))}
+                        {losers.length === 0 && (
+                            <div className="text-xs text-slate-500 italic">No losers data</div>
+                        )}
+                    </div>
                 </div>
-            </div>
-        </div>
+            </CardContent>
+        </Card>
     );
 }
