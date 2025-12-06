@@ -1,0 +1,9 @@
+requests
+pandas
+fastapi
+uvicorn
+python-multipart
+scikit-learn
+prophet
+feedparser
+numpy
