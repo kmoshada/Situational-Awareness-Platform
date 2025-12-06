@@ -1,0 +1,2 @@
+2025-12-06 11:20:30,269 INFO Generating mock weather data (No API Key found)
+2025-12-06 11:20:30,269 INFO Saved weather data to /home/km/Developments/Web/System SL/situational-awareness/backend/collectors/../data/weather/weather_latest.json
