@@ -21,10 +21,12 @@ const TrafficMap = dynamic(() => import('@/components/TrafficMap'), {
 const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
 export default function Dashboard() {
-    const { data: signals } = useSWR("http://127.0.0.1:8000/api/signals", fetcher, { refreshInterval: 5000 });
-    const { data: market } = useSWR("http://127.0.0.1:8000/api/market", fetcher, { refreshInterval: 5000 });
-    const { data: risk } = useSWR("http://127.0.0.1:8000/api/risk", fetcher, { refreshInterval: 5000 });
-    const { data: opportunities } = useSWR("http://127.0.0.1:8000/api/opportunities", fetcher, { refreshInterval: 5000 });
+    const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000";
+
+    const { data: signals } = useSWR(`${API_URL}/api/signals`, fetcher, { refreshInterval: 5000 });
+    const { data: market } = useSWR(`${API_URL}/api/market`, fetcher, { refreshInterval: 5000 });
+    const { data: risk } = useSWR(`${API_URL}/api/risk`, fetcher, { refreshInterval: 5000 });
+    const { data: opportunities } = useSWR(`${API_URL}/api/opportunities`, fetcher, { refreshInterval: 5000 });
 
     return (
         <div className="min-h-screen bg-slate-950 text-slate-100 p-4 md:p-6 lg:p-8 font-sans">
@@ -101,7 +103,7 @@ export default function Dashboard() {
                                 gainers={market?.gainers || []}
                                 losers={market?.losers || []}
                             />
-                            <ExchangeRateCard usdRate={signals?.cbsl?.usd_rate || 0} />
+                            <ExchangeRateCard rates={signals?.cbsl?.raw?.rates || {}} />
                         </div>
 
 
