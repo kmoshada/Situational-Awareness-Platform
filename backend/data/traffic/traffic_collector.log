@@ -122,3 +122,11 @@
 2025-12-08 10:03:42,467 INFO TOMTOM_KEY not configured — using simulated traffic
 2025-12-08 10:03:42,471 INFO Saved traffic data to /home/km/Developments/Web/System SL/situational-awareness/backend/collectors/../data/traffic/traffic_20251208_043342.csv and /home/km/Developments/Web/System SL/situational-awareness/backend/collectors/../data/traffic/traffic_latest.json
 2025-12-08 10:03:42,471 INFO Traffic collector finished
+2025-12-08 23:31:51,578 INFO Traffic collector started
+2025-12-08 23:31:51,581 INFO TOMTOM_KEY not configured — using simulated traffic
+2025-12-08 23:31:51,594 INFO Saved traffic data to /home/km/Developments/Web/System SL/situational-awareness/backend/collectors/../data/traffic/traffic_20251208_180151.csv and /home/km/Developments/Web/System SL/situational-awareness/backend/collectors/../data/traffic/traffic_latest.json
+2025-12-08 23:31:51,594 INFO Traffic collector finished
+2025-12-08 23:37:00,154 INFO Traffic collector started
+2025-12-08 23:37:00,154 INFO TOMTOM_KEY not configured — using simulated traffic
+2025-12-08 23:37:00,158 INFO Saved traffic data to /home/km/Developments/Web/System SL/situational-awareness/backend/collectors/../data/traffic/traffic_20251208_180700.csv and /home/km/Developments/Web/System SL/situational-awareness/backend/collectors/../data/traffic/traffic_latest.json
+2025-12-08 23:37:00,158 INFO Traffic collector finished
