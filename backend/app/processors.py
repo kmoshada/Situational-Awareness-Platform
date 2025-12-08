@@ -3,7 +3,7 @@ import json
 import pandas as pd
 from datetime import datetime
 import logging
-from .ml_engine import detect_market_anomaly, compute_rolling_trend
+from backend.ml_engine.analyzer import detect_trends, detect_anomalies, cluster_events
 
 # Adjusted base path to match my project structure
 # Adjusted base path to match my project structure
@@ -91,7 +91,7 @@ def get_news_overview():
             count += len(v) if isinstance(v, list) else 0
             sources.append(k)
             
-    return {"headline_count": count, "sources": sources, "latest": latest}
+    return {"headline_count": count, "sources": sources, "latest": latest, "raw": news}
 
 def get_weather_overview():
     weather = read_latest_json("weather", "weather_latest.json")
@@ -200,19 +200,30 @@ def build_overall_indicators():
     except Exception:
         mv = 0
 
-    # ML Anomaly Detection
-    current_index = cse.get("index", 0) or 10000
+    # ML Engine Integration
+    ml_input = {
+        "news": news.get("raw", []),
+        "cse_gainers": cse.get("gainers", []),
+        "weather": []
+    }
     
-    # Try to load recent history from CSVs for real anomaly detection
-    # For now, if no history, we just check against the current value (simplified)
-    # or skip anomaly detection to avoid fake positives.
+    # Preprocess weather for ML engine (needs 'city' in dict)
+    if weather.get("raw") and "locations" in weather["raw"]:
+        for city, data in weather["raw"]["locations"].items():
+            # Create a clean dict for the analyzer
+            w_item = data.copy()
+            w_item["city"] = city
+            ml_input["weather"].append(w_item)
+
+    # Run Analysis
+    ml_trends = detect_trends(ml_input)
+    ml_anomalies = detect_anomalies(ml_input)
+    ml_clusters = cluster_events(ml_input)
+
+    # Risk score adjustments based on new ML
+    # If we have market anomalies, increase risk
+    market_anom_detected = any(a['type'] == 'market_anomaly' for a in ml_anomalies)
     
-    # TODO: Implement proper history loading from data/cse/*.csv
-    real_history = [current_index] 
-    
-    is_anom, anom_score = detect_market_anomaly(real_history)
-    
-    # Risk score
     risk_score = 0
     risk_score += weather.get("severity", 0) * 10 
     risk_score += (traffic["avg_congestion"] / 100) * 20 
@@ -220,11 +231,10 @@ def build_overall_indicators():
     risk_score += (activity_score / 100) * 10 
     
     # Economic risk (High USD rate = risk? or volatility?)
-    # For now, just add a small factor if USD > 300 (Mock threshold)
     if cbsl["usd_rate"] > 300:
         risk_score += 10
         
-    if is_anom:
+    if market_anom_detected:
         risk_score += 20
         
     risk_score = min(100, int(risk_score))
@@ -240,7 +250,7 @@ def build_overall_indicators():
     if traffic["avg_congestion"] < 30:
         opp_score += 10
     if events["upcoming"]:
-        opp_score += 20 # Events bring business opportunities
+        opp_score += 20 
 
     return {
         "national_activity_score": activity_score,
@@ -253,5 +263,7 @@ def build_overall_indicators():
         "traffic": traffic,
         "cbsl": cbsl,
         "events": events,
-        "market_anomaly": {"detected": is_anom, "score": anom_score}
+        "ml_trends": ml_trends,
+        "ml_anomalies": ml_anomalies,
+        "ml_clusters": ml_clusters
     }

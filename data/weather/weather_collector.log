@@ -1,0 +1,5 @@
+2025-12-05 09:41:44,026 INFO Weather collector started
+2025-12-05 09:41:44,027 INFO Saved weather data to /home/km/Developments/Web/System SL/situational-awareness/collectors/../data/weather/weather_20251205_041144.json
+2025-12-05 09:41:44,027 INFO Weather collector finished
+2025-12-05 09:48:05,717 INFO Generating mock weather data (No API Key found)
+2025-12-05 09:48:05,718 INFO Saved weather data to /home/km/Developments/Web/System SL/situational-awareness/collectors/../data/weather/weather_latest.json

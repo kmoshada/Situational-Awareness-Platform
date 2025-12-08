@@ -1,0 +1,65 @@
+{
+  "fetched_at": "2025-12-05T04:18:05.717535",
+  "locations": {
+    "Colombo": {
+      "main": {
+        "temp": 30
+      },
+      "weather": [
+        {
+          "main": "Windy",
+          "description": "Windy"
+        }
+      ],
+      "alert": null
+    },
+    "Galle": {
+      "main": {
+        "temp": 27
+      },
+      "weather": [
+        {
+          "main": "Cloudy",
+          "description": "Cloudy"
+        }
+      ],
+      "alert": null
+    },
+    "Kandy": {
+      "main": {
+        "temp": 32
+      },
+      "weather": [
+        {
+          "main": "Stormy",
+          "description": "Stormy"
+        }
+      ],
+      "alert": "High Wind Warning"
+    },
+    "Jaffna": {
+      "main": {
+        "temp": 27
+      },
+      "weather": [
+        {
+          "main": "Sunny",
+          "description": "Sunny"
+        }
+      ],
+      "alert": null
+    },
+    "Trincomalee": {
+      "main": {
+        "temp": 34
+      },
+      "weather": [
+        {
+          "main": "Sunny",
+          "description": "Sunny"
+        }
+      ],
+      "alert": null
+    }
+  }
+}

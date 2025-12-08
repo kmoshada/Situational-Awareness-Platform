@@ -61,12 +61,9 @@ def signals():
         "weather_alerts": len(indicators["weather"]["alerts"]),
         "cse_gainers": indicators["cse"]["gainers_count"]
     }
-    indicators["trends"] = [{"type": "news", "description": t["title"]} for t in indicators["news"].get("latest", [])]
-    # Weather alerts are already covered in 'risk' factors, so we don't need them in anomalies to avoid duplicates
-    indicators["anomalies"] = []
-    
-    if indicators["market_anomaly"]["detected"]:
-        indicators["anomalies"].append({"type": "market", "description": "Abnormal market movement detected"})
+    indicators["trends"] = indicators.get("ml_trends", [])
+    indicators["anomalies"] = indicators.get("ml_anomalies", [])
+    indicators["clusters"] = indicators.get("ml_clusters", [])
 
     return indicators
 
@@ -76,7 +73,9 @@ def get_risk():
     factors = data["weather"]["alerts"][:]
     if data["market_volatility_percent"] > 60:
         factors.append(f"High Market Stress ({data['market_volatility_percent']:.0f}%)")
-    if data["market_anomaly"]["detected"]:
+    # Check for market anomalies in the list
+    market_anomalies = [a for a in data.get("ml_anomalies", []) if "market" in a.get("type", "")]
+    if market_anomalies:
         factors.append("Market Anomaly Detected")
         
     return {

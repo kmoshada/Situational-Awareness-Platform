@@ -7,9 +7,10 @@ import { StatCard } from '@/components/StatCard';
 import { MarketTicker } from '@/components/MarketTicker';
 import { NewsFeed } from '@/components/NewsFeed';
 import { WeatherWidget } from '@/components/WeatherWidget';
-import { MarketTable } from '@/components/MarketTable';
+
 import { EventsCard } from '@/components/EventsCard';
 import { ExchangeRateCard } from '@/components/ExchangeRateCard';
+import { MLInsights } from '@/components/MLInsights';
 
 // Dynamic import for Map to avoid SSR issues
 const TrafficMap = dynamic(() => import('@/components/TrafficMap'), {
@@ -81,6 +82,13 @@ export default function Dashboard() {
                     />
                 </div>
 
+                {/* AI Insights Section */}
+                <MLInsights
+                    trends={signals?.trends}
+                    anomalies={signals?.anomalies}
+                    clusters={signals?.clusters}
+                />
+
                 {/* Main Content Grid */}
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
 
@@ -96,7 +104,7 @@ export default function Dashboard() {
                             <ExchangeRateCard usdRate={signals?.cbsl?.usd_rate || 0} />
                         </div>
 
-                        <MarketTable stocks={market?.prices || []} />
+
                     </div>
 
                     {/* Right Column: News, Weather, Events (Span 4) */}

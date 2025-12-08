@@ -1,0 +1,26 @@
+[
+  {
+    "location": "Colombo-Kandy Road",
+    "congestion": "Severe",
+    "estimated_delay_minutes": 106,
+    "timestamp": "2025-12-05T04:11:44.234109"
+  },
+  {
+    "location": "Southern Expressway",
+    "congestion": "Moderate",
+    "estimated_delay_minutes": 12,
+    "timestamp": "2025-12-05T04:11:44.234174"
+  },
+  {
+    "location": "Galle Road",
+    "congestion": "High",
+    "estimated_delay_minutes": 26,
+    "timestamp": "2025-12-05T04:11:44.234228"
+  },
+  {
+    "location": "High Level Road",
+    "congestion": "Severe",
+    "estimated_delay_minutes": 91,
+    "timestamp": "2025-12-05T04:11:44.234242"
+  }
+]

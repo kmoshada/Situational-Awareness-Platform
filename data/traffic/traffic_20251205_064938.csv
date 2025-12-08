@@ -1,0 +1,6 @@
+city,lat,lon,congestion_percent,incident_count,fetched_at_utc,source
+Colombo,6.9271,79.8612,36.4,0,2025-12-05T06:49:38.457738,simulated
+Galle,6.0535,80.221,33.1,1,2025-12-05T06:49:38.457738,simulated
+Kandy,7.2906,80.6337,35.4,0,2025-12-05T06:49:38.457738,simulated
+Jaffna,9.6615,80.0255,18.9,0,2025-12-05T06:49:38.457738,simulated
+Negombo,7.2083,79.8358,15.7,1,2025-12-05T06:49:38.457738,simulated

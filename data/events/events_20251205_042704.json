@@ -1,0 +1,24 @@
+{
+  "fetched_at_utc": "2025-12-05T04:27:04.826136",
+  "year": 2025,
+  "nager_holidays": [],
+  "google_calendar": null,
+  "fallback": [
+    {
+      "date": "YYYY-MM-DD",
+      "name": "Poya Day (recurring; see schedule)"
+    },
+    {
+      "date": "2025-12-25",
+      "name": "Christmas Day"
+    },
+    {
+      "date": "2025-04-14",
+      "name": "Sinhala & Tamil New Year"
+    },
+    {
+      "date": "2025-02-04",
+      "name": "Independence Day (observed)"
+    }
+  ]
+}

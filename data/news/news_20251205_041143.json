@@ -1,0 +1,65 @@
+[
+  {
+    "source": "NewsFirst",
+    "topic": "Economy",
+    "headline": "Breaking: Economy update from NewsFirst - Positive Developments Observed",
+    "sentiment_score": 0.6956103359368135,
+    "timestamp": "2025-12-05T04:11:43.860430"
+  },
+  {
+    "source": "Twitter",
+    "topic": "Health",
+    "headline": "Breaking: Health update from Twitter - Critical Situation Reported",
+    "sentiment_score": -0.7529525058204527,
+    "timestamp": "2025-12-05T04:11:43.860473"
+  },
+  {
+    "source": "Twitter",
+    "topic": "Entertainment",
+    "headline": "Breaking: Entertainment update from Twitter - Critical Situation Reported",
+    "sentiment_score": -0.9916904217445839,
+    "timestamp": "2025-12-05T04:11:43.860484"
+  },
+  {
+    "source": "NewsFirst",
+    "topic": "Sports",
+    "headline": "Breaking: Sports update from NewsFirst - Positive Developments Observed",
+    "sentiment_score": 0.7230338416697288,
+    "timestamp": "2025-12-05T04:11:43.860491"
+  },
+  {
+    "source": "Twitter",
+    "topic": "Technology",
+    "headline": "Breaking: Technology update from Twitter - Positive Developments Observed",
+    "sentiment_score": 0.9215746942354481,
+    "timestamp": "2025-12-05T04:11:43.860498"
+  },
+  {
+    "source": "Twitter",
+    "topic": "Politics",
+    "headline": "Breaking: Politics update from Twitter - Positive Developments Observed",
+    "sentiment_score": 0.632082035325169,
+    "timestamp": "2025-12-05T04:11:43.860505"
+  },
+  {
+    "source": "NewsFirst",
+    "topic": "Sports",
+    "headline": "Breaking: Sports update from NewsFirst",
+    "sentiment_score": -0.2317744542653719,
+    "timestamp": "2025-12-05T04:11:43.860511"
+  },
+  {
+    "source": "DailyMirror",
+    "topic": "Politics",
+    "headline": "Breaking: Politics update from DailyMirror",
+    "sentiment_score": -0.2076388605111701,
+    "timestamp": "2025-12-05T04:11:43.860518"
+  },
+  {
+    "source": "DailyMirror",
+    "topic": "Politics",
+    "headline": "Breaking: Politics update from DailyMirror - Positive Developments Observed",
+    "sentiment_score": 0.5012276956059554,
+    "timestamp": "2025-12-05T04:11:43.860524"
+  }
+]
