@@ -1,2 +1,5 @@
 node_modules
 .env
+check_cse_api.py
+test_analyzer.py
+verify_api.py
