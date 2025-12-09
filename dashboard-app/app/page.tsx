@@ -8,6 +8,7 @@ import { MarketTicker } from '@/components/MarketTicker';
 import { NewsFeed } from '@/components/NewsFeed';
 import { WeatherWidget } from '@/components/WeatherWidget';
 import { DateTimeDisplay } from '@/components/DateTimeDisplay';
+import { RiskDonut } from '@/components/RiskDonut';
 
 import { EventsCard } from '@/components/EventsCard';
 import { ExchangeRateCard } from '@/components/ExchangeRateCard';
@@ -38,7 +39,7 @@ export default function Dashboard() {
                 {/* Header */}
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-center border-b border-slate-800 pb-6">
                     <div>
-                        <h1 className="text-3xl font-bold tracking-tight text-white">Situational Awareness</h1>
+                        <h1 className="text-3xl font-bold tracking-tight text-white">LK-Awareness</h1>
                         <p className="text-slate-400 mt-2">Real-time National Intelligence Dashboard</p>
                         <div className="mt-2">
                             <DateTimeDisplay />
@@ -65,14 +66,9 @@ export default function Dashboard() {
                         trend="up"
                         trendValue="+2.5%"
                     />
-                    <StatCard
-                        title="Risk Score"
-                        value={risk?.score ? (risk.score * 100).toFixed(0) : "-"}
-                        icon={AlertTriangle}
-                        description="Overall risk assessment"
-                        trend={risk?.score > 0.5 ? "down" : "neutral"}
-                        trendValue={risk?.score > 0.5 ? "High" : "Normal"}
-                        className={risk?.score > 0.5 ? "border-red-900/50 bg-red-950/10" : ""}
+                    <RiskDonut
+                        score={risk?.score ? (risk.score * 100) : 0}
+                        factors={risk?.factors || []}
                     />
                     <StatCard
                         title="Opportunity Score"
@@ -112,6 +108,8 @@ export default function Dashboard() {
                                 losers={market?.losers || []}
                             />
                             <ExchangeRateCard rates={signals?.cbsl?.raw?.rates || {}} />
+                            <WeatherWidget summaries={signals?.weather?.summaries || []} />
+                            <EventsCard events={signals?.events?.upcoming || []} />
                         </div>
 
 
@@ -120,8 +118,6 @@ export default function Dashboard() {
                     {/* Right Column: News, Weather, Events (Span 4) */}
                     <div className="lg:col-span-4 space-y-6">
                         <NewsFeed news={signals?.news?.latest || []} />
-                        <WeatherWidget summaries={signals?.weather?.summaries || []} />
-                        <EventsCard events={signals?.events?.upcoming || []} />
                     </div>
 
                 </div>

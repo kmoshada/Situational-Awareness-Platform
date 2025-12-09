@@ -23,7 +23,12 @@ pip install -r requirements.txt
 
 # Check/Download Spacy Model
 echo "Checking/Downloading Spacy Model..."
-python -m spacy download en_core_web_sm
+if python -c "import spacy; spacy.load('en_core_web_sm')" >/dev/null 2>&1; then
+    echo "Spacy model 'en_core_web_sm' is already installed."
+else
+    echo "Spacy model 'en_core_web_sm' not found. Downloading..."
+    python -m spacy download en_core_web_sm
+fi
 
 # Run Uvicorn from the project root
 echo "Starting Backend Server..."
