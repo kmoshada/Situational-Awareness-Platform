@@ -1,31 +1,19 @@
 {
-  "fetched_at": "2025-12-06T05:50:30.268981",
+  "fetched_at": "2025-12-09T04:10:55.239853",
   "locations": {
     "Colombo": {
       "main": {
-        "temp": 31
+        "temp": 27
       },
       "weather": [
         {
-          "main": "Cloudy",
-          "description": "Cloudy"
+          "main": "Sunny",
+          "description": "Sunny"
         }
       ],
       "alert": null
     },
     "Galle": {
-      "main": {
-        "temp": 28
-      },
-      "weather": [
-        {
-          "main": "Rainy",
-          "description": "Rainy"
-        }
-      ],
-      "alert": "Flood Warning"
-    },
-    "Kandy": {
       "main": {
         "temp": 26
       },
@@ -37,9 +25,21 @@
       ],
       "alert": null
     },
+    "Kandy": {
+      "main": {
+        "temp": 33
+      },
+      "weather": [
+        {
+          "main": "Sunny",
+          "description": "Sunny"
+        }
+      ],
+      "alert": null
+    },
     "Jaffna": {
       "main": {
-        "temp": 30
+        "temp": 32
       },
       "weather": [
         {
@@ -51,12 +51,12 @@
     },
     "Trincomalee": {
       "main": {
-        "temp": 35
+        "temp": 34
       },
       "weather": [
         {
-          "main": "Cloudy",
-          "description": "Cloudy"
+          "main": "Rainy",
+          "description": "Rainy"
         }
       ],
       "alert": null
