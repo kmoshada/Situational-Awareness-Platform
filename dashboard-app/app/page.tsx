@@ -7,6 +7,7 @@ import { StatCard } from '@/components/StatCard';
 import { MarketTicker } from '@/components/MarketTicker';
 import { NewsFeed } from '@/components/NewsFeed';
 import { WeatherWidget } from '@/components/WeatherWidget';
+import { DateTimeDisplay } from '@/components/DateTimeDisplay';
 
 import { EventsCard } from '@/components/EventsCard';
 import { ExchangeRateCard } from '@/components/ExchangeRateCard';
@@ -23,7 +24,9 @@ const fetcher = (url: string) => fetch(url).then((res) => res.json());
 export default function Dashboard() {
     const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000";
 
-    const { data: signals } = useSWR(`${API_URL}/api/signals`, fetcher, { refreshInterval: 5000 });
+    const { data: signals, error: signalsError } = useSWR(`${API_URL}/api/signals`, fetcher, { refreshInterval: 5000 });
+
+    const isSystemLive = !signalsError && signals;
     const { data: market } = useSWR(`${API_URL}/api/market`, fetcher, { refreshInterval: 5000 });
     const { data: risk } = useSWR(`${API_URL}/api/risk`, fetcher, { refreshInterval: 5000 });
     const { data: opportunities } = useSWR(`${API_URL}/api/opportunities`, fetcher, { refreshInterval: 5000 });
@@ -37,13 +40,18 @@ export default function Dashboard() {
                     <div>
                         <h1 className="text-3xl font-bold tracking-tight text-white">Situational Awareness</h1>
                         <p className="text-slate-400 mt-2">Real-time National Intelligence Dashboard</p>
+                        <div className="mt-2">
+                            <DateTimeDisplay />
+                        </div>
                     </div>
-                    <div className="mt-4 md:mt-0 flex items-center gap-3 bg-slate-900/50 px-4 py-2 rounded-full border border-slate-800">
+                    <div className={`mt-4 md:mt-0 flex items-center gap-3 px-4 py-2 rounded-full border ${isSystemLive ? 'bg-slate-900/50 border-slate-800' : 'bg-red-950/30 border-red-900/50'}`}>
                         <span className="relative flex h-3 w-3">
-                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                            <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+                            <span className={`animate-ping absolute inline-flex h-full w-full rounded-full opacity-75 ${isSystemLive ? 'bg-green-400' : 'bg-red-400'}`}></span>
+                            <span className={`relative inline-flex rounded-full h-3 w-3 ${isSystemLive ? 'bg-green-500' : 'bg-red-500'}`}></span>
                         </span>
-                        <span className="text-sm font-medium text-green-400">System Live</span>
+                        <span className={`text-sm font-medium ${isSystemLive ? 'text-green-400' : 'text-red-400'}`}>
+                            {isSystemLive ? 'System Live' : 'System Offline'}
+                        </span>
                     </div>
                 </div>
 

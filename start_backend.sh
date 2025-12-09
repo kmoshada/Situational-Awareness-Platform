@@ -17,6 +17,14 @@ if [[ "$CONDA_DEFAULT_ENV" != "TF" ]]; then
     exit 1
 fi
 
+# Install Dependencies
+echo "Installing/Updating Dependencies..."
+pip install -r requirements.txt
+
+# Check/Download Spacy Model
+echo "Checking/Downloading Spacy Model..."
+python -m spacy download en_core_web_sm
+
 # Run Uvicorn from the project root
 echo "Starting Backend Server..."
 echo "Command: uvicorn backend.app.main:app --reload --port 8000"

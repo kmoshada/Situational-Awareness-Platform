@@ -24,6 +24,8 @@ def run_collectors_loop():
             subprocess.run([sys.executable, str(COLLECTORS_DIR / "cbsl_collector.py")])
             subprocess.run([sys.executable, str(COLLECTORS_DIR / "events_collector.py")])
             subprocess.run([sys.executable, str(COLLECTORS_DIR / "cse_collector.py")])
+            subprocess.run([sys.executable, str(COLLECTORS_DIR / "news_collector.py")])
+            subprocess.run([sys.executable, str(COLLECTORS_DIR / "weather_collector.py")])
             print("Collectors finished. Sleeping for 5 minutes.")
         except Exception as e:
             print(f"Error running collectors: {e}")

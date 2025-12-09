@@ -32,6 +32,13 @@ def detect_trends(data):
     news = data.get("news", [])
     
     if not news or not nlp:
+        if not nlp:
+            return [{
+                "type": "error",
+                "description": "ML Model Missing. Server restarting to download...",
+                "entity": "System",
+                "count": 0
+            }]
         return trends
 
     # Combine titles for analysis
@@ -76,6 +83,12 @@ def detect_anomalies(data):
             
     # 2. Market Anomalies (Isolation Forest)
     if not SKLEARN_AVAILABLE:
+        if not anomalies:
+            anomalies.append({
+                "type": "error",
+                "severity": "Warning",
+                "description": "Anomaly Detection Disabled (Scikit-learn missing)"
+            })
         return anomalies
 
     # In a real scenario, we'd fetch historical price data. 
