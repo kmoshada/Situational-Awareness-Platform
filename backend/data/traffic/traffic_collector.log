@@ -154,3 +154,39 @@
 2025-12-09 09:40:44,171 INFO TOMTOM_KEY not configured — using simulated traffic
 2025-12-09 09:40:44,185 INFO Saved traffic data to /home/km/Developments/Web/System SL/situational-awareness/backend/collectors/../data/traffic/traffic_20251209_041044.csv and /home/km/Developments/Web/System SL/situational-awareness/backend/collectors/../data/traffic/traffic_latest.json
 2025-12-09 09:40:44,186 INFO Traffic collector finished
+2025-12-09 09:45:56,078 INFO Traffic collector started
+2025-12-09 09:45:56,078 INFO TOMTOM_KEY not configured — using simulated traffic
+2025-12-09 09:45:56,084 INFO Saved traffic data to /home/km/Developments/Web/System SL/situational-awareness/backend/collectors/../data/traffic/traffic_20251209_041556.csv and /home/km/Developments/Web/System SL/situational-awareness/backend/collectors/../data/traffic/traffic_latest.json
+2025-12-09 09:45:56,084 INFO Traffic collector finished
+2025-12-09 12:13:36,843 INFO Traffic collector started
+2025-12-09 12:13:36,843 INFO TOMTOM_KEY not configured — using simulated traffic
+2025-12-09 12:13:36,845 INFO Saved traffic data to /home/km/Developments/Web/System SL/situational-awareness/backend/collectors/../data/traffic/traffic_20251209_064336.csv and /home/km/Developments/Web/System SL/situational-awareness/backend/collectors/../data/traffic/traffic_latest.json
+2025-12-09 12:13:36,845 INFO Traffic collector finished
+2025-12-09 12:19:01,408 INFO Traffic collector started
+2025-12-09 12:19:01,408 INFO TOMTOM_KEY not configured — using simulated traffic
+2025-12-09 12:19:01,410 INFO Saved traffic data to /home/km/Developments/Web/System SL/situational-awareness/backend/collectors/../data/traffic/traffic_20251209_064901.csv and /home/km/Developments/Web/System SL/situational-awareness/backend/collectors/../data/traffic/traffic_latest.json
+2025-12-09 12:19:01,410 INFO Traffic collector finished
+2025-12-09 12:24:12,714 INFO Traffic collector started
+2025-12-09 12:24:12,714 INFO TOMTOM_KEY not configured — using simulated traffic
+2025-12-09 12:24:12,716 INFO Saved traffic data to /home/km/Developments/Web/System SL/situational-awareness/backend/collectors/../data/traffic/traffic_20251209_065412.csv and /home/km/Developments/Web/System SL/situational-awareness/backend/collectors/../data/traffic/traffic_latest.json
+2025-12-09 12:24:12,716 INFO Traffic collector finished
+2025-12-09 12:29:28,083 INFO Traffic collector started
+2025-12-09 12:29:28,083 INFO TOMTOM_KEY not configured — using simulated traffic
+2025-12-09 12:29:28,084 INFO Saved traffic data to /home/km/Developments/Web/System SL/situational-awareness/backend/collectors/../data/traffic/traffic_20251209_065928.csv and /home/km/Developments/Web/System SL/situational-awareness/backend/collectors/../data/traffic/traffic_latest.json
+2025-12-09 12:29:28,084 INFO Traffic collector finished
+2025-12-09 12:34:35,084 INFO Traffic collector started
+2025-12-09 12:34:35,084 INFO TOMTOM_KEY not configured — using simulated traffic
+2025-12-09 12:34:35,086 INFO Saved traffic data to /home/km/Developments/Web/System SL/situational-awareness/backend/collectors/../data/traffic/traffic_20251209_070435.csv and /home/km/Developments/Web/System SL/situational-awareness/backend/collectors/../data/traffic/traffic_latest.json
+2025-12-09 12:34:35,086 INFO Traffic collector finished
+2025-12-09 12:47:32,179 INFO Traffic collector started
+2025-12-09 12:47:32,179 INFO TOMTOM_KEY not configured — using simulated traffic
+2025-12-09 12:47:32,181 INFO Saved traffic data to /home/km/Developments/Web/System SL/situational-awareness/backend/collectors/../data/traffic/traffic_20251209_071732.csv and /home/km/Developments/Web/System SL/situational-awareness/backend/collectors/../data/traffic/traffic_latest.json
+2025-12-09 12:47:32,181 INFO Traffic collector finished
+2025-12-09 12:52:38,934 INFO Traffic collector started
+2025-12-09 12:52:38,934 INFO TOMTOM_KEY not configured — using simulated traffic
+2025-12-09 12:52:38,936 INFO Saved traffic data to /home/km/Developments/Web/System SL/situational-awareness/backend/collectors/../data/traffic/traffic_20251209_072238.csv and /home/km/Developments/Web/System SL/situational-awareness/backend/collectors/../data/traffic/traffic_latest.json
+2025-12-09 12:52:38,936 INFO Traffic collector finished
+2025-12-09 12:57:46,118 INFO Traffic collector started
+2025-12-09 12:57:46,118 INFO TOMTOM_KEY not configured — using simulated traffic
+2025-12-09 12:57:46,120 INFO Saved traffic data to /home/km/Developments/Web/System SL/situational-awareness/backend/collectors/../data/traffic/traffic_20251209_072746.csv and /home/km/Developments/Web/System SL/situational-awareness/backend/collectors/../data/traffic/traffic_latest.json
+2025-12-09 12:57:46,120 INFO Traffic collector finished

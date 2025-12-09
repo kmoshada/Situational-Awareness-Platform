@@ -1,0 +1,52 @@
+{
+  "fetched_at_utc": "2025-12-09T07:17:33.248852",
+  "rates": {
+    "USD": {
+      "lkr_per_unit": 308.385197,
+      "timestamp": "Tue, 09 Dec 2025 00:02:31 +0000"
+    },
+    "EUR": {
+      "lkr_per_unit": 359.08305649774746,
+      "timestamp": "Tue, 09 Dec 2025 00:02:31 +0000"
+    },
+    "GBP": {
+      "lkr_per_unit": 410.83242454721665,
+      "timestamp": "Tue, 09 Dec 2025 00:02:31 +0000"
+    },
+    "JPY": {
+      "lkr_per_unit": 1.9801932959200101,
+      "timestamp": "Tue, 09 Dec 2025 00:02:31 +0000"
+    },
+    "INR": {
+      "lkr_per_unit": 3.4200573188752896,
+      "timestamp": "Tue, 09 Dec 2025 00:02:31 +0000"
+    }
+  },
+  "changes": {
+    "USD": {
+      "now": 308.385197,
+      "prev": null,
+      "change_pct": 0.0
+    },
+    "EUR": {
+      "now": 359.08305649774746,
+      "prev": null,
+      "change_pct": 0.0
+    },
+    "GBP": {
+      "now": 410.83242454721665,
+      "prev": null,
+      "change_pct": 0.0
+    },
+    "JPY": {
+      "now": 1.9801932959200101,
+      "prev": null,
+      "change_pct": 0.0
+    },
+    "INR": {
+      "now": 3.4200573188752896,
+      "prev": null,
+      "change_pct": 0.0
+    }
+  }
+}

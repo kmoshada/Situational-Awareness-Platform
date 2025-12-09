@@ -2,3 +2,31 @@
 2025-12-06 11:20:28,768 INFO Fetching ada_derana from https://www.adaderana.lk/rss.php
 2025-12-06 11:20:29,158 INFO Fetching daily_mirror from https://www.dailymirror.lk/rss
 2025-12-06 11:20:29,669 INFO Saved 20 news items to /home/km/Developments/Web/System SL/situational-awareness/backend/collectors/../data/news/news_latest.json
+2025-12-09 12:19:10,785 INFO News collector started
+2025-12-09 12:19:10,785 INFO Fetching ada_derana from https://www.adaderana.lk/rss.php
+2025-12-09 12:19:11,580 INFO Fetching daily_mirror from https://www.dailymirror.lk/rss
+2025-12-09 12:19:12,277 INFO Saved 20 news items to /home/km/Developments/Web/System SL/situational-awareness/backend/collectors/../data/news/news_latest.json
+2025-12-09 12:24:26,250 INFO News collector started
+2025-12-09 12:24:26,250 INFO Fetching ada_derana from https://www.adaderana.lk/rss.php
+2025-12-09 12:24:26,857 INFO Fetching daily_mirror from https://www.dailymirror.lk/rss
+2025-12-09 12:24:27,675 INFO Saved 20 news items to /home/km/Developments/Web/System SL/situational-awareness/backend/collectors/../data/news/news_latest.json
+2025-12-09 12:29:33,484 INFO News collector started
+2025-12-09 12:29:33,484 INFO Fetching ada_derana from https://www.adaderana.lk/rss.php
+2025-12-09 12:29:34,144 INFO Fetching daily_mirror from https://www.dailymirror.lk/rss
+2025-12-09 12:29:34,689 INFO Saved 20 news items to /home/km/Developments/Web/System SL/situational-awareness/backend/collectors/../data/news/news_latest.json
+2025-12-09 12:34:40,927 INFO News collector started
+2025-12-09 12:34:40,927 INFO Fetching ada_derana from https://www.adaderana.lk/rss.php
+2025-12-09 12:34:41,579 INFO Fetching daily_mirror from https://www.dailymirror.lk/rss
+2025-12-09 12:34:42,380 INFO Saved 20 news items to /home/km/Developments/Web/System SL/situational-awareness/backend/collectors/../data/news/news_latest.json
+2025-12-09 12:47:37,443 INFO News collector started
+2025-12-09 12:47:37,443 INFO Fetching ada_derana from https://www.adaderana.lk/rss.php
+2025-12-09 12:47:37,864 INFO Fetching daily_mirror from https://www.dailymirror.lk/rss
+2025-12-09 12:47:38,480 INFO Saved 20 news items to /home/km/Developments/Web/System SL/situational-awareness/backend/collectors/../data/news/news_latest.json
+2025-12-09 12:52:44,596 INFO News collector started
+2025-12-09 12:52:44,596 INFO Fetching ada_derana from https://www.adaderana.lk/rss.php
+2025-12-09 12:52:45,051 INFO Fetching daily_mirror from https://www.dailymirror.lk/rss
+2025-12-09 12:52:45,775 INFO Saved 20 news items to /home/km/Developments/Web/System SL/situational-awareness/backend/collectors/../data/news/news_latest.json
+2025-12-09 12:57:51,223 INFO News collector started
+2025-12-09 12:57:51,223 INFO Fetching ada_derana from https://www.adaderana.lk/rss.php
+2025-12-09 12:57:51,744 INFO Fetching daily_mirror from https://www.dailymirror.lk/rss
+2025-12-09 12:57:52,407 INFO Saved 20 news items to /home/km/Developments/Web/System SL/situational-awareness/backend/collectors/../data/news/news_latest.json
