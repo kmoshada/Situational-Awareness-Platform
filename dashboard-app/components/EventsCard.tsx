@@ -26,10 +26,14 @@ export function EventsCard({ events }: EventsCardProps) {
                             key={index}
                             className="flex items-center justify-between p-3 rounded-lg bg-slate-900/50 border border-slate-800"
                         >
-                            <span className="font-medium text-slate-200">{event.name}</span>
-                            <span className="text-sm text-purple-400 bg-purple-950/30 px-2 py-1 rounded border border-purple-900/30">
-                                {event.date}
+                            <span className="font-medium text-slate-200">
+                                {event.name.replace(/\(recurring; see schedule\)/g, '').trim()}
                             </span>
+                            {event.date !== 'YYYY-MM-DD' && (
+                                <span className="text-sm text-purple-400 bg-purple-950/30 px-2 py-1 rounded border border-purple-900/30">
+                                    {event.date}
+                                </span>
+                            )}
                         </div>
                     ))}
                     {events.length === 0 && (

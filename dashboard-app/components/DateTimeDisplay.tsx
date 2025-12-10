@@ -15,7 +15,7 @@ export function DateTimeDisplay() {
     if (!mounted) return null;
 
     return (
-        <div className="text-slate-400 text-sm font-medium">
+        <div className="text-slate-400 font-medium">
             {date.toLocaleDateString('en-GB', {
                 weekday: 'long',
                 year: 'numeric',

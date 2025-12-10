@@ -37,15 +37,15 @@ export default function Dashboard() {
             <div className="max-w-[1600px] mx-auto space-y-6">
 
                 {/* Header */}
-                <div className="flex flex-col md:flex-row justify-between items-start md:items-center border-b border-slate-800 pb-6">
-                    <div>
-                        <h1 className="text-3xl font-bold tracking-tight text-white">LK-Awareness</h1>
-                        <p className="text-slate-400 mt-2">Real-time National Intelligence Dashboard</p>
-                        <div className="mt-2">
-                            <DateTimeDisplay />
-                        </div>
+                <div className="relative flex flex-col md:flex-row justify-center items-center border-b border-slate-800 pb-6">
+                    <div className="text-center">
+                        <h1 className="text-7xl font-bold tracking-tight text-[oklch(43.2%_0.232_292.759)]">LK-Awareness</h1>
+                        <p className="text-slate-400 mt-3">Real-time National Intelligence Dashboard</p>
                     </div>
-                    <div className={`mt-4 md:mt-0 flex items-center gap-3 px-4 py-2 rounded-full border ${isSystemLive ? 'bg-slate-900/50 border-slate-800' : 'bg-red-950/30 border-red-900/50'}`}>
+                    <div className="mt-6 md:mt-1 md:absolute md:left-0 md:top-1/2 md:-translate-y-1/2 text-xl ">
+                        <DateTimeDisplay />
+                    </div>
+                    <div className={`mt-4 md:mt-0 md:absolute md:right-0 md:top-1/2 md:-translate-y-1/2 md:-mt-3 flex items-center gap-3 px-4 py-2 rounded-full border ${isSystemLive ? 'bg-slate-900/50 border-slate-800' : 'bg-red-950/30 border-red-900/50'}`}>
                         <span className="relative flex h-3 w-3">
                             <span className={`animate-ping absolute inline-flex h-full w-full rounded-full opacity-75 ${isSystemLive ? 'bg-green-400' : 'bg-red-400'}`}></span>
                             <span className={`relative inline-flex rounded-full h-3 w-3 ${isSystemLive ? 'bg-green-500' : 'bg-red-500'}`}></span>
