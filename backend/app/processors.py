@@ -3,7 +3,10 @@ import json
 import pandas as pd
 from datetime import datetime
 import logging
-from backend.ml_engine.analyzer import detect_trends, detect_anomalies, cluster_events
+try:
+    from backend.ml_engine.analyzer import detect_trends, detect_anomalies, cluster_events
+except ImportError:
+    from ml_engine.analyzer import detect_trends, detect_anomalies, cluster_events
 
 # Adjusted base path to match my project structure
 # Adjusted base path to match my project structure

@@ -11,9 +11,9 @@ from pathlib import Path
 app = FastAPI(title="Situational Awareness API")
 
 # Calculate absolute path to collectors directory
-# main.py is in backend/app/main.py -> ../../.. is project root
-BASE_DIR = Path(__file__).resolve().parent.parent.parent
-COLLECTORS_DIR = BASE_DIR / "backend" / "collectors"
+# Relative to this file (app/main.py), collectors are in ../collectors
+BASE_DIR = Path(__file__).resolve().parent.parent
+COLLECTORS_DIR = BASE_DIR / "collectors"
 
 def run_collectors_loop():
     """Runs data collectors in a background loop every 5 minutes."""
