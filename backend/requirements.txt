@@ -8,4 +8,4 @@ prophet
 feedparser
 numpy
 spacy
-scikit-learn
+
