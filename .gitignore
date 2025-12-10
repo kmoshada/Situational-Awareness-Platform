@@ -6,5 +6,4 @@ verify_api.py
 check_cse_api.py
 verify_imports.py
 verify_output.txt
-backend/Dockerfile
 
