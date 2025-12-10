@@ -1490,3 +1490,23 @@ requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
 2025-12-09 12:57:51,128 INFO Fetched list with 1 rows
 2025-12-09 12:57:51,131 INFO Saved to /home/km/Developments/Web/System SL/situational-awareness/backend/collectors/../data/cse/indices_20251209_072751.csv and /home/km/Developments/Web/System SL/situational-awareness/backend/collectors/../data/cse/indices_latest.json
 2025-12-09 12:57:51,132 INFO CSE collector finished
+2025-12-09 13:02:54,668 INFO CSE collector started
+2025-12-09 13:02:54,668 INFO Fetching summary from https://www.cse.lk/api/marketSummery
+2025-12-09 13:02:55,361 INFO Saved dict as single-row DataFrame
+2025-12-09 13:02:55,362 INFO Saved to /home/km/Developments/Web/System SL/situational-awareness/backend/collectors/../data/cse/summary_20251209_073255.csv and /home/km/Developments/Web/System SL/situational-awareness/backend/collectors/../data/cse/summary_latest.json
+2025-12-09 13:02:55,363 INFO Fetching status from https://www.cse.lk/api/marketStatus
+2025-12-09 13:02:56,077 INFO Saved dict as single-row DataFrame
+2025-12-09 13:02:56,078 INFO Saved to /home/km/Developments/Web/System SL/situational-awareness/backend/collectors/../data/cse/status_20251209_073256.csv and /home/km/Developments/Web/System SL/situational-awareness/backend/collectors/../data/cse/status_latest.json
+2025-12-09 13:02:56,079 INFO Fetching prices from https://www.cse.lk/api/todaySharePrice
+2025-12-09 13:02:56,692 INFO Fetched list with 10 rows
+2025-12-09 13:02:56,693 INFO Saved to /home/km/Developments/Web/System SL/situational-awareness/backend/collectors/../data/cse/prices_20251209_073256.csv and /home/km/Developments/Web/System SL/situational-awareness/backend/collectors/../data/cse/prices_latest.json
+2025-12-09 13:02:56,693 INFO Fetching gainers from https://www.cse.lk/api/topGainers
+2025-12-09 13:02:57,407 INFO Fetched list with 10 rows
+2025-12-09 13:02:57,408 INFO Saved to /home/km/Developments/Web/System SL/situational-awareness/backend/collectors/../data/cse/gainers_20251209_073257.csv and /home/km/Developments/Web/System SL/situational-awareness/backend/collectors/../data/cse/gainers_latest.json
+2025-12-09 13:02:57,409 INFO Fetching losers from https://www.cse.lk/api/topLooses
+2025-12-09 13:03:01,362 INFO Fetched list with 10 rows
+2025-12-09 13:03:01,363 INFO Saved to /home/km/Developments/Web/System SL/situational-awareness/backend/collectors/../data/cse/losers_20251209_073301.csv and /home/km/Developments/Web/System SL/situational-awareness/backend/collectors/../data/cse/losers_latest.json
+2025-12-09 13:03:01,363 INFO Fetching indices from https://www.cse.lk/api/marketIndices
+2025-12-09 13:03:01,812 INFO Fetched list with 1 rows
+2025-12-09 13:03:01,814 INFO Saved to /home/km/Developments/Web/System SL/situational-awareness/backend/collectors/../data/cse/indices_20251209_073301.csv and /home/km/Developments/Web/System SL/situational-awareness/backend/collectors/../data/cse/indices_latest.json
+2025-12-09 13:03:01,814 INFO CSE collector finished
