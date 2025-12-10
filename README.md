@@ -17,7 +17,7 @@ A real-time situational awareness dashboard for Sri Lanka, integrating multi-sou
 
 ## Setup & Running
 
-For detailed local running instructions, please refer to [LOCAL_RUN.md](LOCAL_RUN.md).
+For detailed local running instructions, please refer to [LOCAL_RUN_GUIDE.md](../LOCAL_RUN_GUIDE.md).
 
 ### Quick Start
 
