@@ -1,6 +1,8 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Newspaper, ExternalLink } from "lucide-react";
 
+import CardInfo from "./CardInfo";
+
 interface NewsItem {
     title: string;
     source: string;
@@ -19,6 +21,7 @@ export function NewsFeed({ news }: NewsFeedProps) {
                 <CardTitle className="flex items-center gap-2">
                     <Newspaper className="h-5 w-5 text-blue-400" />
                     Latest Intelligence
+                    <CardInfo content="Aggregated news feed filtered for high-relevance national security and economic updates." />
                 </CardTitle>
             </CardHeader>
             <CardContent>

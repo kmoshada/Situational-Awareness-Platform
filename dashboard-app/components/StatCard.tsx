@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowDown, ArrowUp, Minus } from "lucide-react";
 import { cn } from "@/lib/utils";
+import CardInfo from "./CardInfo";
 
 interface StatCardProps {
     title: string;
@@ -10,6 +11,7 @@ interface StatCardProps {
     trend?: "up" | "down" | "neutral";
     trendValue?: string;
     className?: string;
+    info?: string;
 }
 
 export function StatCard({
@@ -20,12 +22,14 @@ export function StatCard({
     trend,
     trendValue,
     className,
+    info,
 }: StatCardProps) {
     return (
         <Card className={cn("hover:bg-slate-900/50 transition-colors", className)}>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                <CardTitle className="text-sm font-medium text-slate-400">
+                <CardTitle className="text-sm font-medium text-slate-400 flex items-center gap-2">
                     {title}
+                    {info && <CardInfo content={info} />}
                 </CardTitle>
                 <Icon className="h-4 w-4 text-slate-400" />
             </CardHeader>

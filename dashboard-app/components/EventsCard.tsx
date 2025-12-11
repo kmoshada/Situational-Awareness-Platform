@@ -1,4 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import CardInfo from "./CardInfo";
 import { Calendar } from "lucide-react";
 
 interface Event {
@@ -14,9 +15,9 @@ export function EventsCard({ events }: EventsCardProps) {
     return (
         <Card>
             <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                    <Calendar className="h-5 w-5 text-purple-400" />
-                    Upcoming Events
+                <CardTitle className="flex items-center">
+                    Latest Events
+                    <CardInfo content="Real-time news and events feed aggregated from multiple national sources." />
                 </CardTitle>
             </CardHeader>
             <CardContent>

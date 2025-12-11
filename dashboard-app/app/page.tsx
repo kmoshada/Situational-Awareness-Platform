@@ -65,6 +65,7 @@ export default function Dashboard() {
                         description="Composite activity index"
                         trend="up"
                         trendValue="+2.5%"
+                        info="Composite score representing overall national activity levels based on news, traffic, and social signals."
                     />
                     <RiskDonut
                         score={risk?.score ? (risk.score * 100) : 0}
@@ -77,6 +78,7 @@ export default function Dashboard() {
                         description="Market opportunity index"
                         trend="up"
                         trendValue="Good"
+                        info="AI-calculated score indicating favorable market conditions and investment opportunities."
                     />
                     <StatCard
                         title="Market Volatility"
@@ -85,6 +87,7 @@ export default function Dashboard() {
                         description="Probability of disruption"
                         trend="neutral"
                         trendValue="Stable"
+                        info="Current market volatility percentage indicating potential for rapid price fluctuations."
                     />
                 </div>
 

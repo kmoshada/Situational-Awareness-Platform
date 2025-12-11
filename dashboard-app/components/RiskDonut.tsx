@@ -3,6 +3,8 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { AlertTriangle } from "lucide-react";
 
+import CardInfo from "./CardInfo";
+
 interface RiskDonutProps {
     score: number;
     factors: string[];
@@ -29,8 +31,9 @@ export function RiskDonut({ score, factors }: RiskDonutProps) {
     return (
         <Card className="h-full border-slate-800 bg-slate-900/50">
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                <CardTitle className="text-sm font-medium text-slate-400">
+                <CardTitle className="text-sm font-medium text-slate-400 flex items-center">
                     Risk Score
+                    <CardInfo content="Current aggregated risk verification score based on real-time analysis." />
                 </CardTitle>
                 <AlertTriangle className={`h-4 w-4 ${color}`} />
             </CardHeader>

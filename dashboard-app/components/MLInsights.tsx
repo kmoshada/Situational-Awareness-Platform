@@ -1,4 +1,5 @@
 import { Brain, TrendingUp, AlertOctagon, Layers } from 'lucide-react';
+import CardInfo from "./CardInfo";
 
 interface MLInsightsProps {
     trends?: any[];
@@ -14,7 +15,10 @@ export function MLInsights({ trends = [], anomalies = [], clusters = [] }: MLIns
                     <Brain className="w-5 h-5 text-purple-400" />
                 </div>
                 <div>
-                    <h3 className="text-lg font-semibold text-slate-100">AI Intelligence</h3>
+                    <h3 className="text-lg font-semibold text-slate-100 flex items-center">
+                        AI Intelligence
+                        <CardInfo content="Machine learning generated insights identifying anomalies and clusters in the data." />
+                    </h3>
                     <p className="text-sm text-slate-400">Real-time ML Analysis</p>
                 </div>
             </div>

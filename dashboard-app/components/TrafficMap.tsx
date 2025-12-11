@@ -6,6 +6,7 @@ import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Map as MapIcon } from "lucide-react";
+import CardInfo from "./CardInfo";
 
 // Fix for default marker icon
 const iconUrl = "https://unpkg.com/leaflet@1.9.3/dist/images/marker-icon.png";
@@ -45,6 +46,7 @@ export default function TrafficMap({ data }: TrafficMapProps) {
                 <CardTitle className="flex items-center gap-2">
                     <MapIcon className="h-5 w-5 text-blue-400" />
                     Live Traffic & Incidents
+                    <CardInfo content="Real-time traffic congestion and incident reporting map." />
                 </CardTitle>
             </CardHeader>
             <CardContent className="flex-1 p-0 relative">

@@ -1,6 +1,8 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Cloud, CloudRain, CloudLightning, Sun, CloudFog } from "lucide-react";
 
+import CardInfo from "./CardInfo";
+
 interface WeatherSummary {
     city: string;
     temp: number | string;
@@ -27,6 +29,7 @@ export function WeatherWidget({ summaries }: WeatherWidgetProps) {
                 <CardTitle className="flex items-center gap-2">
                     <Cloud className="h-5 w-5 text-slate-200" />
                     Weather Conditions
+                    <CardInfo content="Current weather updates for key economic zones." />
                 </CardTitle>
             </CardHeader>
             <CardContent>

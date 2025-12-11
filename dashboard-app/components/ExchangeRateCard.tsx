@@ -1,6 +1,8 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Banknote, ArrowRight } from "lucide-react";
 
+import CardInfo from "./CardInfo";
+
 interface ExchangeRateCardProps {
     rates: Record<string, { lkr_per_unit: number }>;
 }
@@ -20,6 +22,7 @@ export function ExchangeRateCard({ rates }: ExchangeRateCardProps) {
                 <CardTitle className="flex items-center gap-2">
                     <Banknote className="h-5 w-5 text-emerald-400" />
                     Exchange Rates
+                    <CardInfo content="Real-time currency exchange rates against LKR (Sri Lankan Rupee)." />
                 </CardTitle>
             </CardHeader>
             <CardContent className="space-y-3">

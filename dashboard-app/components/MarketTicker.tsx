@@ -1,6 +1,8 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { TrendingUp, TrendingDown } from "lucide-react";
 
+import CardInfo from "./CardInfo";
+
 interface Stock {
     symbol: string;
     price: number;
@@ -20,6 +22,7 @@ export function MarketTicker({ gainers, losers }: MarketTickerProps) {
                 <CardTitle className="flex items-center gap-2">
                     <TrendingUp className="h-5 w-5 text-green-500" />
                     Market Movers
+                    <CardInfo content="Top gaining and losing stocks in the current market session." />
                 </CardTitle>
             </CardHeader>
             <CardContent className="space-y-6">
